@@ -1,9 +1,8 @@
-SRC=eltorito.py
 INSTALL=/usr/bin/
 analyze:
 	pip install pep257 pycodestyle
-	pycodestyle $(SRC)
-	pep257 $(SRC)
+	pycodestyle eltorito.py
+	pep257 eltorito.py
 
 install:
 	cp eltorito.py $(INSTALL)/eltorito
