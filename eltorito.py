@@ -10,9 +10,8 @@ import argparse
 import os
 import struct
 
-
-V_SECTOR_SIZE=512
-SECTOR_SIZE=2048
+V_SECTOR_SIZE = 512
+SECTOR_SIZE = 2048
 
 
 def _get_sector(number, count, file_input):
@@ -78,7 +77,7 @@ def _extract(input_file, output_file):
     count = 0
     if media == 0:
         media_type = "no emulation"
-        count=0
+        count = 0
     elif media == 1:
         media_type = "1.2meg floppy"
         count = 1200 * 1024 / V_SECTOR_SIZE
@@ -100,7 +99,9 @@ def _extract(input_file, output_file):
     if count == 0:
         count = cnt
     print("Boot media is: {}".format(media_type))
-    print("Image starts at {} and has {} sectors of {} bytes".format(start, count, V_SECTOR_SIZE))
+    print("Starts at {} and has {} sectors (@ {} bytes)".format(start,
+                                                                count,
+                                                                V_SECTOR_SIZE))
     image = _get_sector(start, count, input_file)
     with open(output_file, 'wb') as f:
         f.write(image)
@@ -120,7 +121,7 @@ def main():
         print("output file already exists {}".format(args.output))
         exit(1)
     _extract(args.input, args.output)
-    
+
 
 if __name__ == "__main__":
     main()
