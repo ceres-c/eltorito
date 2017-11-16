@@ -5,4 +5,4 @@ analyze:
 	pep257 eltorito.py
 
 install:
-	cp eltorito.py $(INSTALL)/eltorito
+	sudo install -Dm755 eltorito.py $(INSTALL)/eltorito
