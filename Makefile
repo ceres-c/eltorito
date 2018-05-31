@@ -1,4 +1,5 @@
-INSTALL=/usr/bin/
+INSTALL := /usr/bin/
+
 analyze:
 	pip install pep257 pycodestyle
 	pycodestyle eltorito.py
