@@ -1,0 +1,11 @@
+NAME=eltoritopy
+PKGVER=20181027
+PKGREL=1
+LICENSE=MIT
+MAINTAINER="Sean Enck \<enckse@voidedtech.com\>"
+REQUIRES="python3"
+BUILDDEPS="python3"
+DESC="Python utility to extract eltorito images from bootable images
+  standard: https://en.wikipedia.org/wiki/El_Torito_(CD-ROM_standard)"
+MAKE_CLEAN=0
+MAKE_ALL=0

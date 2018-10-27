@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 Extract El Torito image from a bootable CD (or image).
 
