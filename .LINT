@@ -1,6 +1,0 @@
-E: eltoritopy: debian-changelog-file-missing
-E: eltoritopy: no-copyright-file
-W: eltoritopy: binary-without-manpage usr/bin/eltorito
-W: eltoritopy: control-file-is-empty conffiles
-W: eltoritopy: priority-extra-is-replaced-by-priority-optional
-W: eltoritopy: unknown-section checkinstall
