@@ -1,29 +1,19 @@
 eltorito
 ===
 
-A python utility to extract 'el torito' images from bootable cd images/isos
-
-[![Build Status](https://travis-ci.org/enckse/eltorito.svg?branch=master)](https://travis-ci.org/enckse/eltorito)
-
-# install
-
-clone the repository and
-```
-make install
-```
-
-or change install location
-```
-make install INSTALL=/usr/sbin/
-```
-
-or from the cloned location
-```
-python eltorito.py
-```
+A python library to extract 'el torito' images from bootable cd images/isos
 
 # usage
 
-```
-eltorito <input.img> <output.img>
+clone the repository and
+```python
+import eltorito as et
+
+INFILE = './distr.iso'
+OUTFILE = './out.img'
+
+with open(INFILE, 'rb') as infile_handle, open(OUTFILE, 'wb') as outfile_handle:
+	extracted = et.extract(infile_handle)
+	print(extracted['info']) # Image information
+	outfile_handle.write(extracted['data'].getbuffer())
 ```
